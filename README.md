@@ -21,7 +21,7 @@ This paper measures the impact of baryons (ordinary matter) on the density profi
 
 
 
-# Using Code
+# How to Use Code
 Note: I assume the user of this repo is already a Python user and at least has either Anaconda or Miniconda or Miniforge installed. The person should have access to at least Jupyter Notebook or Jupyterlab. You can equally run the code using Visual studio code or Pycharm or Google colab.
 
 To use the code in this repo follow the following steps.
