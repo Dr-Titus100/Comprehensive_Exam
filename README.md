@@ -15,3 +15,11 @@ This paper presents a novel algorithm to dynamically disentangle the inner and o
  * Paper IV: The impact of baryons on massive galaxy clusters: halo structure and cluster mass estimates [Henson et al., 2017](https://academic.oup.com/mnras/article/465/3/3361/2454758?login=true).
 This paper measures the impact of baryons (ordinary matter) on the density profiles of massive galaxy clusters. They used data from the BAHAMAS (BAryons HAlos MAssive System) and MACSIS (MAssive ClusterS and Intercluster Structure) hydrodynamic simulations.
 
+
+
+# Compiling and Using
+To use the code in this repo follow the following steps.
+* Clone the repo using the following command.
+``
+
+
