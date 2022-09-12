@@ -26,7 +26,7 @@ Note: I assume the user of this repo is already a Python user and at least has e
 
 To use the code in this repo follow the following steps.
 * Clone the repo using the following command.
-* 
+
 `git clone https://github.com/Dr-Titus100/Comprehensive_Exam.git`
 
 You may also fork the repo if interested.
