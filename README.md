@@ -23,7 +23,9 @@ Note: I assume the user of this repo is already a Python user and at least has e
 
 To use the code in this repo follow the following steps.
 * Clone the repo using the following command.
+* 
 `git clone https://github.com/Dr-Titus100/Comprehensive_Exam.git`
+
 You may also fork the repo if interested.
 
 * Install packages. All the packages used in the notebook and their versions are listed in the `requirements.txt` file. Activate your python environment and run the following command in the terminal to install all the packages at once.
@@ -31,12 +33,12 @@ You may also fork the repo if interested.
 `pip install -r requirements.txt`
 
 Note: You may create a new Python environment to run this project. This ensures your existing projects are uninterrupted. To create a new Python environment use the following command:
+
 `conda create --name <env_name> python=<version>`
 
 
 Note: The file in the directory `Multiprocessing` take a long time to run. It is advisable to run it by submitting a job on a cluster. I have also uploaded a sample bash script in that directory. I used that script to submit my job on the R2 cluster.
 
-The bash script I used to submit the job to the R2 cluster is also uploaded in that folder.
 
 
 
