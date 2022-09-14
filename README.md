@@ -1,6 +1,6 @@
 # Dark Matter Halo Density Profile Calibration
 
-* Author: Titus Nyarko Nde
+* Author: Titus Nyarko Nde (Computing Ph.D. - Data Science emphasis)
 * Course: Comprehensive Exam
 * Semester: Fall 2022
 
