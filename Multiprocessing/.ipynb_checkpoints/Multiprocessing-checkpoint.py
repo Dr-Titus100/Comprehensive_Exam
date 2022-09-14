@@ -20,7 +20,7 @@ X_test_actual = pd.read_csv("Data/X_test_actual.csv")
 ##########################################################################
 #Function to compute DK14 density
 ##########################################################################
-#----------------------------Setting Cosmology. This is a global set up
+#----------Setting Cosmology. This is a global set up
 params = {'flat': True, 'H0': 70, 'Om0': 0.286, 'Ob0': 0.046, 'sigma8': 0.82, 'ns': 0.96}
 cosmo = cosmology.setCosmology('my_cosmo', params)
 
@@ -28,14 +28,21 @@ def diemer_14(split_chunk):
     '''
     This functions takes a chunk of data, fits the DK14 profile  to 
     compute the densities, and then returns the squared difference between 
-    the DK14 predictions and the actual densities
+    the DK14 predictions and the actual densities.
+    #----------Argument/Input:
+        split_chunk: A chunk of data set. Variables in this data set is to 
+                     be used to calibrate the densities.
+    #----------Output(s):
+        Saves the squared difference between the DK14 predictions and the actual 
+        densities into a .npy file.
     '''
     DK14_Density = []
-    # #Setting Cosmology.
+    # #----------Setting Cosmology.
     # params = {'flat': True, 'H0': 70, 'Om0': 0.286, 'Ob0': 0.046, 'sigma8': 0.82, 'ns': 0.96}
     # cosmo = cosmology.setCosmology('my_cosmo', params)
     for i in range(len(split_chunk)):
         '''
+        #-------------Paramters
         Mvir: virial mass of halo
         Rvir: virial radius
         rs: virial radius
