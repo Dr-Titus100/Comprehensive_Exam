@@ -9,7 +9,7 @@ In this tutorial, we calibrate dark matter density profiles using machine learni
 * Use neural network ensembles to better capture the complexity of density profiles and achieve more accurate density calibration. 
 * Quantify prediction uncertainties (hereafter error bars). The idea is to make interval predictions rather than a single-point prediction in the case of the analytic models. This will help us capture the effect of differences in cosmology in our predictions.
 
-A synthesis paper based on dark matter halo density profile calibration is included in the directory **Synthesis_Paper**. This is a comprehensive review of four main seed papers, namely:
+A synthesis paper based on dark matter halo density profile calibration is included in the directory `Synthesis_Paper`. This is a comprehensive review of four main seed papers, namely:
 
 
  * Paper I: Dependence of the outer profiles of halos on their mass accretion rate [Diemer & Kravtsov, 2014](https://iopscience.iop.org/article/10.1088/0004-637X/789/1/1).
