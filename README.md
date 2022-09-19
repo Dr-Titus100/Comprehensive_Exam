@@ -64,7 +64,7 @@ I have provided further comments in the `.sh` file. Those comments will be usefu
 Also, if a module is missing, then you have to add a line in the `.sh` file to load the module.
 
 ```
-module load <path/to/module>
+module load <Path/to/module>
 ```
 
 
@@ -82,9 +82,26 @@ To load the models, use the following command.
 
 ```
 from tensorflow.keras.models import load_model
-model1 = load_model('model1.h5')  # the .h5 format
-model2 = load_model('model2') # the protocol buffer format, where `model2` is the name of the folder containing the multiple files.
+model = load_model('model.h5')  # the .h5 format
 ```
+or 
+
+```
+model = load_model('model') # the protocol buffer format, where `model` is the name of the folder containing the multiple files.
+```
+
+
+Once a model is loaded successfully, we can use the loaded model by using the following command.
+
+```
+model.<Attribute>
+```
+For instance, we use the following
+
+```
+model.predict(test_data)
+```
+to make predictions on the test.
 
 
 You can also retrain your own data using the already trained models once your data satisfy the same conditions as those used to train the models in the first place. This methods lead to 
