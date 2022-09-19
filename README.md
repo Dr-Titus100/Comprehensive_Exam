@@ -97,7 +97,12 @@ model.predict(test_data)
 to make predictions on the test. Specifically, if you want know how to make multiple predictions with the Monte Carlo dropout ], see the `UncertaintyQuantification` notebook. For the Deep Ensembles models all the individual modles are saved so we can load all of them and use them each of them to predict. Alternatively, see the `UncertaintyQuantification` notebook.
 
 
-Note: You can also retrain your own data using an already trained model once your data satisfy the same conditions as those used to train the models in the first place. In this case, you do not have to necessarily recompile the model again. This method leads to faster training time and sometimes leads to better performance.
+Note: You can also retrain your own data using an already trained model once your data satisfy the same conditions as those used to train the models in the first place. In this case, you do not have to necessarily recompile the model again. This method leads to faster training time and sometimes leads to better performance. To retrain the loaded model, simply use the following command.
+
+```
+model.fit(X_train, y_train)
+```
+
 
 
 See the following links for more details on saving, loading, and retraining saved models:
