@@ -32,36 +32,47 @@ Note: I assume the user of this repo is already a Python user and at least has e
 To use the code in this repo follow the following steps.
 * Clone the repo using the following command.
 
-`git clone https://github.com/Dr-Titus100/Comprehensive_Exam.git`
+```
+git clone https://github.com/Dr-Titus100/Comprehensive_Exam.git
+```
+
 
 You may also fork the repo if interested.
 
 * Install packages. All the packages used in the notebook and their versions are listed in the `requirements.txt` file. Activate your python environment and run the following command in the terminal to install all the packages at once.
 
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 Note: You may create a new Python environment to run this project. This ensures your existing projects are uninterrupted. To create a new Python environment use the following command:
 
-`conda create --name <env_name> python=<version>`
+```
+conda create --name <env_name> python=<version>
+```
 
 
 ## Submitting Jobs
 For the DK14 profile, it takes a long time to compute the mean squared error for the entire test set. I computed the MSE for the entire test by submitting a job on the R2 cluster. The files in the directory `Multiprocessing`. It is advisable to run the `.py` file by submitting a job on a cluster. I have also uploaded a sample bash script in that directory, which I used to submit my job on the R2 cluster. To submit a job simply run the following command on a cluster node (make sure you are not on the login node).
 
-`sbatch Multiprocessing.sh`
+```
+sbatch Multiprocessing.sh
+```
 
 I have provided further comments in the `.sh` file. Those comments will be useful for anyone who wants to run the Python script. 
 
 Also, if a module is missing, then you have to add a line in the `.sh` file to load the module.
 
-`module load <path/to/module>`
+```
+module load <path/to/module>
+```
 
 
 ## Using Saved Models
 The models might take take time to run on a local computers. Hence, we saved all the models so that a user does not necessarily have to run the entire notebooks to train the models before interacting with them. This means you can use the models without training them yourself from scratch. The models were save in two formats:
 
 * `.h5` format: This method save the entire model in a single file. It consumes less space
-* `Protocal buffer` format: This is the default saving format in Tensorflow. It is fast to save and load but saves the model into a folder in multiple files. This approach consumes much space than the `.h5` format.
+* `Protocal Buffer` format: This is the default saving format in Tensorflow. It is fast to save and load but saves the model into a folder in multiple files. This approach consumes much space than the `.h5` format.
 
 See [Save and load Keras models](https://www.tensorflow.org/guide/keras/save_and_serialize) for more details on this topic.
 
@@ -71,6 +82,8 @@ To load the models, use the following command.
 
 ```
 from tensorflow.keras.models import load_model
+model1 = load_model('model1.h5')  # the .h5 format
+model2 = load_model('model2') # the protocol buffer format, where `model2` is the name of the folder containing the multiple files.
 ```
 
 
