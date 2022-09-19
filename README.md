@@ -35,9 +35,8 @@ To use the code in this repo follow the following steps.
 ```
 git clone https://github.com/Dr-Titus100/Comprehensive_Exam.git
 ```
-
-
 You may also fork the repo if interested.
+
 
 * Install packages. All the packages used in the notebook and their versions are listed in the `requirements.txt` file. Activate your python environment and run the following command in the terminal to install all the packages at once.
 
@@ -61,8 +60,7 @@ sbatch Multiprocessing.sh
 
 I have provided further comments in the `.sh` file. Those comments will be useful for anyone who wants to run the Python script. 
 
-Also, if a module is missing, then you have to add a line in the `.sh` file to load the module.
-
+* If a module is missing, then you have to add a line in the `.sh` file to load the module.
 ```
 module load <Path/to/module>
 ```
@@ -78,7 +76,7 @@ See [Save and load Keras models](https://www.tensorflow.org/guide/keras/save_and
 
 
 
-To load the models, use the following command.
+* To load the models, use the following command.
 ```
 from tensorflow.keras.models import load_model
 model = load_model('model.h5')  # the .h5 format
@@ -89,20 +87,19 @@ model = load_model('model') # the protocol buffer format, where `model` is the n
 ```
 
 
-Once a model is loaded successfully, we can use the loaded model by using the following command.
+* Once a model is loaded successfully, we can use the loaded model by using the following command.
 ```
 model.<Attribute>
 ```
-
 
 For instance, we use the following
 ```
 model.predict(test_data)
 ```
-to make predictions on the test.
+to make predictions on the test. Specifically, if you want know how to make multiple predictions with the Monte Carlo dropout ], see the `UncertaintyQuantification` notebook. 
 
 
-You can also retrain your own data using the already trained models once your data satisfy the same conditions as those used to train the models in the first place. This methods lead to 
+Note: You can also retrain your own data using the already trained models once your data satisfy the same conditions as those used to train the models in the first place. This methods lead to 
 
 
 
