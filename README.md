@@ -72,8 +72,6 @@ The models might take take time to run on a local computers. Hence, we saved all
 * `.h5` format: This method save the entire model in a single file. It consumes less space
 * `Protocal Buffer` format: This is the default saving format in Tensorflow. It is fast to save and load but saves the model into a folder in multiple files. This approach consumes much space than the `.h5` format.
 
-See [Save and load Keras models](https://www.tensorflow.org/guide/keras/save_and_serialize) for more details on this topic.
-
 
 
 * To load the models, use the following command.
@@ -102,7 +100,8 @@ to make predictions on the test. Specifically, if you want know how to make mult
 Note: You can also retrain your own data using an already trained model once your data satisfy the same conditions as those used to train the models in the first place. In this case, you do not have to necessarily recompile the model again. This method leads to faster training time and sometimes leads to better performance.
 
 
-See the following links for more details on saving, loading, and retraining models:
+See the following links for more details on saving, loading, and retraining saved models:
+* [Save and load Keras models](https://www.tensorflow.org/guide/keras/save_and_serialize)
 * [Is it possible to retrain a previously saved keras model?](https://stackoverflow.com/questions/51854463/is-it-possible-to-retrain-a-previously-saved-keras-model)
 * [How to Save and Load Your Keras Deep Learning Model](https://machinelearningmastery.com/save-load-keras-deep-learning-models/)
 
