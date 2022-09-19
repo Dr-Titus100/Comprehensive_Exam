@@ -96,10 +96,10 @@ For instance, we use the following
 ```
 model.predict(test_data)
 ```
-to make predictions on the test. Specifically, if you want know how to make multiple predictions with the Monte Carlo dropout ], see the `UncertaintyQuantification` notebook. 
+to make predictions on the test. Specifically, if you want know how to make multiple predictions with the Monte Carlo dropout ], see the `UncertaintyQuantification` notebook. For the Deep Ensembles models all the individual modles are saved so we can load all of them and use them each of them to predict. Alternatively, see the `UncertaintyQuantification` notebook.
 
 
-Note: You can also retrain your own data using the already trained models once your data satisfy the same conditions as those used to train the models in the first place. This methods lead to 
+Note: You can also retrain your own data using the already trained models once your data satisfy the same conditions as those used to train the models in the first place. This methods lead to faster training time and sometimes leads to better performance.
 
 
 
