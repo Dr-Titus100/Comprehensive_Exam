@@ -45,7 +45,16 @@ Note: You may create a new Python environment to run this project. This ensures 
 `conda create --name <env_name> python=<version>`
 
 
-Note: The file in the directory `Multiprocessing` take a long time to run. It is advisable to run it by submitting a job on a cluster. I have also uploaded a sample bash script in that directory. I used that script to submit my job on the R2 cluster.
+## Submitting jobs
+For the DK14 profile, it takes a long time to compute the mean squared error for the entire test set. I computed the MSE for the entire test by submitting a job on the R2 cluster. The files in the directory `Multiprocessing`. It is advisable to run the `.py` file by submitting a job on a cluster. I have also uploaded a sample bash script in that directory, which I used to submit my job on the R2 cluster. To submit a job simply run the following command on a cluster node (make sure you are not on the login node).
+
+`sbatch Multiprocessing.sh`
+
+I have provided further comments in the `.sh` file. Those comments will be useful for anyone who wants to run the Python script. 
+
+Also, if a module is missing, then you have to add a line in the `.sh` file to load the module.
+
+`dfgre`
 
 
 
