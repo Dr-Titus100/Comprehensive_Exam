@@ -45,7 +45,7 @@ Note: You may create a new Python environment to run this project. This ensures 
 `conda create --name <env_name> python=<version>`
 
 
-## Submitting jobs
+## Submitting Jobs
 For the DK14 profile, it takes a long time to compute the mean squared error for the entire test set. I computed the MSE for the entire test by submitting a job on the R2 cluster. The files in the directory `Multiprocessing`. It is advisable to run the `.py` file by submitting a job on a cluster. I have also uploaded a sample bash script in that directory, which I used to submit my job on the R2 cluster. To submit a job simply run the following command on a cluster node (make sure you are not on the login node).
 
 `sbatch Multiprocessing.sh`
@@ -54,10 +54,20 @@ I have provided further comments in the `.sh` file. Those comments will be usefu
 
 Also, if a module is missing, then you have to add a line in the `.sh` file to load the module.
 
-`dfgre`
+`module load <path/to/module>`
 
 
+## Using Saved Models
+The models might take take time to run on a local computers. Hence, we saved all the models so that a user does not necessarily have to run the entire notebooks to train the models before interacting with them. This means you can use the models without training them yourself from scratch. The models were save in two formats:
 
+* `.h5` format: This method save the entire model in a single file. It consumes less space
+* `Protocal buffer` format: This is the default saving format in Tensorflow. It is fast to save and load but saves the model into a folder in multiple files. This approach consumes much space than the `.h5` format.
+
+
+** To load the models, use the following command.
+
+
+You can also retrain your own data using the already trained models once your data satisfy the same conditions as those used to train the models in the first place. This methods lead to 
 
 
 
