@@ -79,25 +79,23 @@ See [Save and load Keras models](https://www.tensorflow.org/guide/keras/save_and
 
 
 To load the models, use the following command.
-
 ```
 from tensorflow.keras.models import load_model
 model = load_model('model.h5')  # the .h5 format
 ```
 or 
-
 ```
 model = load_model('model') # the protocol buffer format, where `model` is the name of the folder containing the multiple files.
 ```
 
 
 Once a model is loaded successfully, we can use the loaded model by using the following command.
-
 ```
 model.<Attribute>
 ```
-For instance, we use the following
 
+
+For instance, we use the following
 ```
 model.predict(test_data)
 ```
