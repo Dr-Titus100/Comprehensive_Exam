@@ -99,9 +99,10 @@ model.predict(test_data)
 to make predictions on the test. Specifically, if you want know how to make multiple predictions with the Monte Carlo dropout ], see the `UncertaintyQuantification` notebook. For the Deep Ensembles models all the individual modles are saved so we can load all of them and use them each of them to predict. Alternatively, see the `UncertaintyQuantification` notebook.
 
 
-Note: You can also retrain your own data using the already trained models once your data satisfy the same conditions as those used to train the models in the first place. This methods lead to faster training time and sometimes leads to better performance.
+Note: You can also retrain your own data using an already trained model once your data satisfy the same conditions as those used to train the models in the first place. In this case, you do not have to necessarily recompile the model again. This method leads to faster training time and sometimes leads to better performance.
 
 
-
-
+See the following links for more details on saving, loading, and retraining models:
+* [Is it possible to retrain a previously saved keras model?](https://stackoverflow.com/questions/51854463/is-it-possible-to-retrain-a-previously-saved-keras-model)
+* [How to Save and Load Your Keras Deep Learning Model](https://machinelearningmastery.com/save-load-keras-deep-learning-models/)
 
