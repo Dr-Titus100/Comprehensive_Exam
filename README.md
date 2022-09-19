@@ -27,7 +27,7 @@ This paper measures the impact of baryons (ordinary matter) on the density profi
 
 
 ## How to Use Code
-Note: I assume the user of this repo is already a Python user and at least has either Anaconda or Miniconda or Miniforge installed. The person should have access to at least Jupyter Notebook or Jupyterlab. You can equally run the code using Visual studio code or Pycharm or Google colab. All Jupyter notebooks regarding this computing artifact is in the folder `Computing_Artifact`.
+Note: I assume the user of this repo is already a Python user and at least has either Anaconda or Miniconda or Miniforge installed. The person should have access to at least Jupyter Notebook or Jupyterlab. You can equally run the code using Visual studio code or Pycharm or Google colab. All Jupyter notebooks regarding this computing artifact are in the folder `Computing_Artifact`.
 
 To use the code in this repo follow the following steps.
 * Clone the repo using the following command.
@@ -67,10 +67,10 @@ module load <Path/to/module>
 
 
 ## Using Saved Models
-The models might take take time to run on a local computers. Hence, we saved all the models so that a user does not necessarily have to run the entire notebooks to train the models before interacting with them. This means you can use the models without training them yourself from scratch. The models were save in two formats:
+The models might take time to run on a local computer. Hence, we saved all the models so that a user does not necessarily have to run the entire notebook to train the models before interacting with them. This means you can use the models without training them yourself from scratch. The models were saved in two formats:
 
-* `.h5` format: This method save the entire model in a single file. It consumes less space
-* `Protocal Buffer` format: This is the default saving format in Tensorflow. It is fast to save and load but saves the model into a folder in multiple files. This approach consumes much space than the `.h5` format.
+* `.h5` format: This method saves the entire model in a single file. It consumes less space
+* `Protocol Buffer` format: This is the default saving format in Tensorflow. It is fast to save and load but saves the model into a folder in multiple files. This approach consumes much more space than the `.h5` format.
 
 
 
@@ -94,7 +94,7 @@ For instance, we use the following
 ```
 model.predict(test_data)
 ```
-to make predictions on the test. Specifically, if you want know how to make multiple predictions with the Monte Carlo dropout ], see the `UncertaintyQuantification` notebook. For the Deep Ensembles models all the individual modles are saved so we can load all of them and use them each of them to predict. Alternatively, see the `UncertaintyQuantification` notebook.
+to make predictions on the test. Specifically, if you want to know how to make multiple predictions with the Monte Carlo dropout ], see the `UncertaintyQuantification` notebook. For the Deep Ensembles, all the individual models are saved so we can load all of them and use each of them to predict. Alternatively, see the `UncertaintyQuantification` notebook.
 
 
 Note: You can also retrain your own data using an already trained model once your data satisfy the same conditions as those used to train the models in the first place. In this case, you do not have to necessarily recompile the model again. This method leads to faster training time and sometimes leads to better performance. To retrain the loaded model, simply use the following command.
