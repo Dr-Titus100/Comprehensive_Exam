@@ -63,8 +63,15 @@ The models might take take time to run on a local computers. Hence, we saved all
 * `.h5` format: This method save the entire model in a single file. It consumes less space
 * `Protocal buffer` format: This is the default saving format in Tensorflow. It is fast to save and load but saves the model into a folder in multiple files. This approach consumes much space than the `.h5` format.
 
+See [Save and load Keras models](https://www.tensorflow.org/guide/keras/save_and_serialize) for more details on this topic.
 
-** To load the models, use the following command.
+
+
+To load the models, use the following command.
+
+```
+from tensorflow.keras.models import load_model
+```
 
 
 You can also retrain your own data using the already trained models once your data satisfy the same conditions as those used to train the models in the first place. This methods lead to 
