@@ -67,7 +67,7 @@ module load <Path/to/module>
 
 
 ## Using Saved Models
-The models might take time to run on a local computer. Hence, we saved all the models so that a user does not necessarily have to run the entire notebook to train the models before interacting with them. This means you can use the models without training them yourself from scratch. The models were saved in two formats:
+The models might take time to run on a local computer. Hence, we saved all the models so that a user does not necessarily have to run the entire notebook to train the models before interacting with them. This means you can use the models without training them yourself from scratch. The models are saved in the folder `Saved_Models`. The models were saved in two formats:
 
 * `.h5` format: This method saves the entire model in a single file. It consumes less space
 * `Protocol Buffer` format: This is the default saving format in Tensorflow. It is fast to save and load but saves the model into a folder in multiple files. This approach consumes much more space than the `.h5` format.
