@@ -108,5 +108,5 @@ model.fit(X_train, y_train)
 See the following links for more details on saving, loading, and retraining saved models:
 * [Save and load Keras models](https://www.tensorflow.org/guide/keras/save_and_serialize)
 * [Is it possible to retrain a previously saved keras model?](https://stackoverflow.com/questions/51854463/is-it-possible-to-retrain-a-previously-saved-keras-model)
-* [How to Save and Load Your Keras Deep Learning Model](https://machinelearningmastery.com/save-load-keras-deep-learning-models/)
+* [How to Save and Load Your Keras Deep Learning Model](https://machinelearningmastery.com/save-load-keras-deep-learning-models/) 
 
