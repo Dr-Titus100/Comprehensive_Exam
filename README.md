@@ -52,7 +52,7 @@ conda create --name <env_name> python=<version>
 
 
 ## Submitting Jobs
-For the DK14 profile, it takes a long time to compute the mean squared error for the entire test set. I computed the MSE for the entire test by submitting a job on the R2 cluster. The files in the repository `Multiprocessing`. It is advisable to run the `.py` file by submitting a job on a cluster. I have also uploaded a sample bash script in that repository, which I used to submit my job on the R2 cluster. To submit a job simply run the following command on a cluster node (make sure you are not on the login node).
+For the DK14 profile, it takes a long time to compute the mean squared error for the entire test set. I computed the MSE for the entire test by submitting a job on the R2 cluster. The files are in the repository `Multiprocessing`. It is advisable to run the `.py` file by submitting a job on a cluster. I have also uploaded a sample bash script in that repository, which I used to submit my job on the R2 cluster. To submit a job simply run the following command on a cluster node (make sure you are not on the login node).
 
 ```
 sbatch Multiprocessing.sh
