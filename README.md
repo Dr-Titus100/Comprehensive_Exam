@@ -97,14 +97,14 @@ model.predict(test_data)
 to make predictions on the test. Specifically, if you want to know how to make multiple predictions with the Monte Carlo dropout ], see the `LoadingSavedModels.ipynb` notebook in the Saved_Models repository. 
 
 
-**NOTE:** 
+#### NOTE:
 You can also retrain your own data using an already trained model once your data satisfy the same conditions as those used to train the models in the first place. In this case, you do not have to necessarily recompile the model again. This method leads to faster training time and sometimes leads to better performance. To retrain the loaded model, simply use the following command.
 
 ```
 model.fit(X_train, y_train)
 ```
 
-**NOTE:**
+#### NOTE:
 For the deep ensembles, all the individual models are saved so we can load all of them and use each of them to predict. Deep ensembles creates several models, hence, saving the models using the `.h5` and `protocol buffer` formats store the models the same way. The two methods save all the individual models into separate `.h5` files in a folder. Thus, loading the models is the same for the two methods. We can check the model summary of any of the models loaded. We can also use any of the models to make single point predictions. See the `LoadingSavedModels.ipynb` notebook in the Saved_Models repository. I demonstrated how to load and make predictions with the deep ensembles models in that notebook. 
 
 
