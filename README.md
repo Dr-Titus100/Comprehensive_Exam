@@ -9,7 +9,7 @@ In this tutorial, we calibrate dark matter density profiles using machine learni
 * Use neural network ensembles to better capture the complexity of density profiles and achieve more accurate density calibration. 
 * Quantify prediction uncertainties (hereafter error bars). The idea is to make interval predictions rather than a single-point prediction in the case of the analytic models. This will help us capture the effect of differences in cosmology in our predictions.
 
-A synthesis paper based on dark matter halo density profile calibration is included in the directory `Synthesis_Paper`. This is a comprehensive review of four main seed papers, namely:
+A synthesis paper based on dark matter halo density profile calibration is included in the `Synthesis_Paper` repository. This is a comprehensive review of four main seed papers, namely:
 
 
  * Paper I: Dependence of the outer profiles of halos on their mass accretion rate [Diemer & Kravtsov, 2014](https://iopscience.iop.org/article/10.1088/0004-637X/789/1/1).
@@ -27,7 +27,7 @@ This paper measures the impact of baryons (ordinary matter) on the density profi
 
 
 ## How to Use Code
-Note: I assume the user of this repo is already a Python user and at least has either Anaconda or Miniconda or Miniforge installed. The person should have access to at least Jupyter Notebook or Jupyterlab. You can equally run the code using Visual studio code or Pycharm or Google colab. All Jupyter notebooks regarding this computing artifact are in the folder `Computing_Artifact`.
+Note: I assume the user of this repo is already a Python user and at least has either Anaconda or Miniconda or Miniforge installed. The person should have access to at least Jupyter Notebook or Jupyterlab. You can equally run the code using Visual studio code or Pycharm or Google colab. All Jupyter notebooks regarding this computing artifact are in the `Computing_Artifact` repository.
 
 To use the code in this repo follow the following steps.
 * Clone the repo using the following command.
@@ -52,7 +52,7 @@ conda create --name <env_name> python=<version>
 
 
 ## Submitting Jobs
-For the DK14 profile, it takes a long time to compute the mean squared error for the entire test set. I computed the MSE for the entire test by submitting a job on the R2 cluster. The files in the directory `Multiprocessing`. It is advisable to run the `.py` file by submitting a job on a cluster. I have also uploaded a sample bash script in that directory, which I used to submit my job on the R2 cluster. To submit a job simply run the following command on a cluster node (make sure you are not on the login node).
+For the DK14 profile, it takes a long time to compute the mean squared error for the entire test set. I computed the MSE for the entire test by submitting a job on the R2 cluster. The files in the repository `Multiprocessing`. It is advisable to run the `.py` file by submitting a job on a cluster. I have also uploaded a sample bash script in that repository, which I used to submit my job on the R2 cluster. To submit a job simply run the following command on a cluster node (make sure you are not on the login node).
 
 ```
 sbatch Multiprocessing.sh
@@ -94,14 +94,22 @@ For instance, we use the following
 ```
 model.predict(test_data)
 ```
-to make predictions on the test. Specifically, if you want to know how to make multiple predictions with the Monte Carlo dropout ], see the `UncertaintyQuantification` notebook. For the Deep Ensembles, all the individual models are saved so we can load all of them and use each of them to predict. Alternatively, see the `UncertaintyQuantification` notebook.
+to make predictions on the test. Specifically, if you want to know how to make multiple predictions with the Monte Carlo dropout ], see the `LoadingSavedModels.ipynb` notebook in the Saved_Models repository. 
 
 
-Note: You can also retrain your own data using an already trained model once your data satisfy the same conditions as those used to train the models in the first place. In this case, you do not have to necessarily recompile the model again. This method leads to faster training time and sometimes leads to better performance. To retrain the loaded model, simply use the following command.
+**Note:** You can also retrain your own data using an already trained model once your data satisfy the same conditions as those used to train the models in the first place. In this case, you do not have to necessarily recompile the model again. This method leads to faster training time and sometimes leads to better performance. To retrain the loaded model, simply use the following command.
 
 ```
 model.fit(X_train, y_train)
 ```
+
+Note:
+For the Deep Ensembles, all the individual models are saved so we can load all of them and use each of them to predict. Alternatively, see the `UncertaintyQuantification` notebook.
+
+## Deep Ensembles (DE)
+
+DE creates several models, hence, saving the models using the `.h5` and `protocol buffer` formats store the models the same way. The two methods save all the individual models into separate `.h5` files in a folder. Thus, loading the models is the same for the two methods. We can check the model summary of any of the models loaded. We can also use any of the models to make single point predictions. Below, we load all models into a list and the use each of them to predict on the test set. We will then calculate the mean and standard deviation of predictions as the aggregate prediction and measure of uncertainty, respectively.
+
 
 
 
